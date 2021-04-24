@@ -13,3 +13,41 @@ html,
   background-repeat: no-repeat;
   color: #ffffff;
 }
+
+.logo{
+  position: absolute;
+  top:5%;
+  left: 30vh;
+
+}
+
+.SetDateAndTime{
+  position: absolute;
+  top: 30%;
+  left:50%;
+}
+
+.TextInput{
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  width:876px;
+}
+
+.ParagraphInput{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.UploadImage{
+  position: relative;
+  top: 50%;
+  left: 65%;
+}
+
+.TogglePrivateOrPublic{
+  position: absolute;
+  top:80%;
+  left: 65%;
+}
