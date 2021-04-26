@@ -1,4 +1,6 @@
 .SetDateAndTime{
+    display: flex;
+    flex-direction: column;
     height: 72px;
     width: 100px;
 }
