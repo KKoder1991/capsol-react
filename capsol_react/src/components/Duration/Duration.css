@@ -1,0 +1,21 @@
+.Duration{
+    height: 160px;
+    width: 160px;
+    display: inline-block;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    border: 1px solid #3a3a3a;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    background-color: #3a3a3a;
+}
