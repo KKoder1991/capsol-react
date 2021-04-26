@@ -21,6 +21,12 @@ html,
 
 }
 
+.Duration{
+  position: absolute;
+  top: 30%;
+  left:30%;
+}
+
 .SetDateAndTime{
   position: absolute;
   top: 30%;
