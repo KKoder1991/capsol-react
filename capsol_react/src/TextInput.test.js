@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 
 import '@testing-library/jest-dom';
 
-import { mount, configure, shallow } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import TextInput from './components/TextInput/TextInput';
