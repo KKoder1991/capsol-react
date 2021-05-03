@@ -1,0 +1,63 @@
+.DisplayInputFields{
+    background-color: rgba(29,29,29,0.6);
+    border: 2px solid white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 800px;
+    margin: 20px;
+}
+
+.SetDateAndTime{
+    border: 2px solid white;
+    height: 100px;
+    margin: 20px;
+}
+
+.EventName{
+    border: 2px solid white;
+    height: 100px;
+    width: 600px;
+    margin: 20px;
+}
+
+input{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 80%;
+    background-color: transparent;
+    height:60%;
+}
+
+input:focus {
+    border: 3px solid #555;
+  }
+  
+
+.Where{
+    border: 2px solid white;
+    height: 100px;
+    width: 600px;
+}
+
+.UploadImage{
+    border: 2px solid white;
+    height: 100px;
+    width: 600px;
+}
+
+.TellUsMore{
+    border: 2px solid white;
+    height: 100px;
+    width: 600px;
+}
+
+.FormButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 600px;
+    height: 100px;
+}
