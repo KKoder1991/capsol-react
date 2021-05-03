@@ -6,11 +6,12 @@ export default class SetDateAndTime extends React.Component{
     render(){
         return(
             <div className="SetDateAndTime">
-                <div id="DateAndTimeHeading">
+                <div className="DateAndTimeHeading">
                     <p>Date & Time</p>
                 </div>
-                <div id="SetDateAndTimeButton">
-                     <button></button>
+                <div className="SetDateAndTimeButtons">
+                     <button>D&T</button>
+                     <button>+</button>
                 </div>
             </div>
           
