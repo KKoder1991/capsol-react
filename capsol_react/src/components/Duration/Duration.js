@@ -6,16 +6,18 @@ export default class Duration extends React.Component{
     render(){
         return(
             <div className="Duration">
-                  <p>Duration</p>
-                  <div className="buttons">
-                        <div id="button-1">
-                                <button></button>
+                <div className="DurationHeading">
+                    <p>Duration</p>
+                </div>
+                  <div className="DurationButtons">
+                        <div id="DurationButton-1">
+                                <button>3hr</button>
                         </div>
-                        <div id="button-2">
-                                <button></button>
+                        <div id="DurationButton-2">
+                                <button>6hr</button>
                         </div>
-                        <div id="button-3">
-                                <button></button>
+                        <div id="DurationButton-3">
+                                <button>9hr</button>
                         </div>
                   </div>          
             </div>
