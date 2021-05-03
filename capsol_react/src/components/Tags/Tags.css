@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.TagContainer{
+    border: 2px white solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color:transparent;
+    width:700px;
+    height: 200px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.ContainerHeading{
+    width: 180px;
+    height: 200px;
+
+}
+
+.TagInputAndRemoveButton{
+    border: 2px solid white;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.TagAndTagDelete button{
+    background-color: transparent;
+    color: white;
+    height: 39px;
+    max-width:218px;
+    border: 2px white solid;
+    border-radius: 30%;
+    justify-content: space-around;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+
+}
+
+.TagInput input {
+    outline: none;
+    color: #ffffff;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 30%;
+    width: 80px;
+    height: 30px;
+}
+
+
+.TagInput{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
