@@ -1,6 +1,9 @@
 import React from "react";
 import "./app.css";
 import logo from "../app/capsol-logo.png";
+import SetDateAndTime from "../SetDateAndTime/SetDateAndTime";
+import TextInput from "../TextInput/TextInput";
+import DisplayInputFields from "../DisplayInputFields/DisplayInputFields";
 
 export default class App extends React.Component {
   render() {
@@ -9,6 +12,9 @@ export default class App extends React.Component {
         <div className="CapSolLogo">
           <img src={logo} alt="logo for capsol"></img>
         </div>
+            <div className="DisplayInputField">
+                <DisplayInputFields />
+            </div>
 
       </div>
     );
