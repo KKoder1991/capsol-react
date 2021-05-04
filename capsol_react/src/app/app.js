@@ -33,10 +33,10 @@ export default class App extends React.Component {
         <div className="DisplayPages">
           <Router>
             <Switch>
+              <Route exact path="/" component={DisplayPopUps} />
+              <Route exact path="/DisplayInputFields" component={DisplayInputFields} />
+              <Route exact path="/PageNotFound" component={PageNotFound} />
               <Redirect to="/PageNotFound"/>
-              <Route component={PageNotFound} />
-              <Route exact path="/" component={DisplayInputFields} />
-              <Route component={DisplayPopUps} />
             </Switch>
            </Router>
         </div>
