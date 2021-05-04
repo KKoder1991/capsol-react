@@ -5,6 +5,8 @@ import logo from "./capsol-logo.png";
 //Pages to be rendered in the router
 import DisplayPopUps from "../pages/DisplayPopUps/DisplayPopUps";
 import DisplayInputFields from "../pages/DisplayInputFields/DisplayInputFields";
+//Page to be rendered when routing to a non-existent page
+import PageNotFound from '../pages/PageNotFound';
 
 import {
   BrowserRouter as Router,
@@ -31,7 +33,8 @@ export default class App extends React.Component {
         <div className="DisplayPages">
           <Router>
             <Switch>
-              <Redirect to="/404"/>
+              <Redirect to="/PageNotFound"/>
+              <Route component={PageNotFound} />
               <Route exact path="/" component={DisplayInputFields} />
               <Route component={DisplayPopUps} />
             </Switch>
