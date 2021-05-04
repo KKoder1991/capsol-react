@@ -1,9 +1,9 @@
 import React from "react";
 import "./app.css";
-import logo from "../app/capsol-logo.png";
-import SetDateAndTime from "../SetDateAndTime/SetDateAndTime";
-import TextInput from "../TextInput/TextInput";
-import DisplayInputFields from "../../pages/DisplayInputFields/DisplayInputFields";
+import logo from "./capsol-logo.png";
+import SetDateAndTime from "../components/SetDateAndTime/SetDateAndTime";
+import TextInput from "../components/TextInput/TextInput";
+import DisplayInputFields from "../pages/DisplayInputFields/DisplayInputFields";
 
 export default class App extends React.Component {
   render() {
