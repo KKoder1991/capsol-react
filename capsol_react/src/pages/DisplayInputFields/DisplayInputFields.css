@@ -1,0 +1,36 @@
+.DisplayInputFields{
+    background-color: rgba(29,29,29,0.7);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 800px;
+    margin: 20px;
+}
+
+.SetDateAndTime, .EventName, .Where, .UploadImage, .TellUsMore{
+    height: 100px;
+    width:600px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 10px;
+    outline: none;
+}
+
+input{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 80%;
+    background-color: rgba(29,29,29,1);
+    height:60%;
+    color: #fff;
+}
+  
+.FormButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 600px;
+    height: 100px;
+}

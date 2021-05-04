@@ -3,7 +3,7 @@ import "./app.css";
 import logo from "../app/capsol-logo.png";
 import SetDateAndTime from "../SetDateAndTime/SetDateAndTime";
 import TextInput from "../TextInput/TextInput";
-import DisplayInputFields from "../DisplayInputFields/DisplayInputFields";
+import DisplayInputFields from "../../pages/DisplayInputFields/DisplayInputFields";
 
 export default class App extends React.Component {
   render() {
