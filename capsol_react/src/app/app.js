@@ -32,6 +32,20 @@ export default class App extends React.Component {
         </div>
         <div className="DisplayPages">
           <Router>
+          <div>
+        <ul>
+          <li>
+            <Link to="/">Pop Ups</Link>
+          </li>
+          <li>
+            <Link to="/DisplayInputFields">About</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </ul>
+
+        <hr />
             <Switch>
               <Route exact path="/" component={DisplayPopUps} />
               <Route exact path="/DisplayInputFields" component={DisplayInputFields} />
