@@ -4,7 +4,7 @@ import './DisplayPopUps.css';
 export default class DisplayPopUps extends React.Component{
     render(){
         return(
-
+            <div class="grid-container"></div>
         );
     };
 }
