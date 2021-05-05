@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from 'react';
 import "./DisplayInputFields.css";
 import SetDateAndTime from "../../components/SetDateAndTime/SetDateAndTime.js";
 import TextInput from "../../components/TextInput/TextInput.js";
@@ -6,14 +7,21 @@ import UploadImage from "../../components/UploadImage/UploadImage";
 import SaveButtonForm from "../../components/SaveButtonForm/SaveButtonForm.js";
 import CancelButtonForm from "../../components/CancelButtonForm/CancelButtonForm";
 
-export default class DisplayInputFields extends React.Component {
-  render() {
+export default function DisplayInputFields() {
+
+  const [ eventName, setName ] = useState("");
+  const [ eventDate, setDate ] = useState("");
+  const [ eventLocation, setLocation ] = useState("");
+  const [ eventDescription, setDescription ] = useState("");
+
     return (
       <div className="DisplayInputFields">
         <form>
           <div className="SetDateAndTime">
             <label>Set the Date and Time</label>
-            <SetDateAndTime id="SetDateAndTime" />
+            <SetDateAndTime id="SetDateAndTime" onChange={(event) => {
+              setDate(event.target.value);
+            }} />
           </div>
           <div className="EventName">
             <label>What's popping up?</label>
@@ -45,4 +53,3 @@ export default class DisplayInputFields extends React.Component {
       </div>
     );
   }
-}
