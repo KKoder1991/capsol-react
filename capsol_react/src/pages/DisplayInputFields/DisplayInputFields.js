@@ -12,6 +12,7 @@ export default function DisplayInputFields() {
   const [ eventName, setName ] = useState("");
   const [ eventDate, setDate ] = useState("");
   const [ eventLocation, setLocation ] = useState("");
+  const [ eventImage, setImage ] = useState("");
   const [ eventDescription, setDescription ] = useState("");
 
     return (
@@ -25,21 +26,30 @@ export default function DisplayInputFields() {
           </div>
           <div className="EventName">
             <label>What's popping up?</label>
-            <input placeholder="Describe your pop up"></input>
+            <input placeholder="Describe your pop up" onChange={(event) => {
+              setName(event.target.value);
+            }}></input>
           </div>
           <div className="Where">
             <label>Where?</label>
             <br></br>
-            <input placeholder="Tell us where it is"></input>
+            <input placeholder="Tell us where it is" onChange={(event) => {
+              setLocation(event.target.value);
+            }}></input>
           </div>
           <div className="UploadImage">
             <label>Upload a Cover photo</label>
-            <UploadImage />
+            <UploadImage  onChange={(event) => {
+              setImage(event.target.value);
+            }}/>
           </div>
           <div className="TellUsMore">
             <label>Tell Us More</label>
             <br></br>
-            <input  type="textarea" placeholder="Anything more to tell us about your pop up?"></input>
+            <input  type="textarea" placeholder="Anything more to tell us about your pop up?"
+            onChange={(event) => {
+              setDescription(event.target.value);
+            }}></input>
           </div>
         </form>
         <div className="FormButtons">
