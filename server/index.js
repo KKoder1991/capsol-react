@@ -34,20 +34,7 @@ app.post("/create", (req, res) => {
     }
   );
 });
-app.get("/test", (req, res) => {
-  res.json({
-    success: true,
-    message: "...",
-  });
-});
 
-app.post("/test", (req, res) => {
-  const {} = req.body;
-  res.json({
-    success: true,
-    message: "...",
-  });
-});
 app.listen(3001, () => {
   console.log("Your server is running on 3001");
 });
