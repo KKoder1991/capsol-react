@@ -1,8 +1,7 @@
 import React from "react";
 import "./DisplayPopUps.css";
 
-export default class DisplayPopUps extends React.Component {
-  render() {
+export default function DisplayPopUps (){
     return (
       <div class="grid-container">
         <div className="container-1">
@@ -17,4 +16,3 @@ export default class DisplayPopUps extends React.Component {
       </div>
     );
   }
-}
