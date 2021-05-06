@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
+const cors = require("cors");
+
+app.use(cors());
+app.use(express.json());
 
 const db = mysql.createConnection({
   user: "root",
@@ -10,11 +14,13 @@ const db = mysql.createConnection({
 });
 
 app.post("/create", (req, res) => {
-  const eventName = req.body.eventName;
-  const eventDate = req.body.eventDate;
-  const eventLocation = req.body.eventLocation;
-  const eventImage = req.body.eventImage;
-  const eventDescription = req.body.eventDescription;
+  const {
+    eventName,
+    eventDate,
+    eventLocation,
+    eventImage,
+    eventDescription,
+  } = req.body;
 
   db.query(
     "INSERT INTO CapSol-Events (eventName, eventDate, eventLocation, eventImage, eventDescription) VALUES (?, ?, ?, ?, ?)",
@@ -28,7 +34,20 @@ app.post("/create", (req, res) => {
     }
   );
 });
+app.get("/test", (req, res) => {
+  res.json({
+    success: true,
+    message: "...",
+  });
+});
 
+app.post("/test", (req, res) => {
+  const {} = req.body;
+  res.json({
+    success: true,
+    message: "...",
+  });
+});
 app.listen(3001, () => {
   console.log("Your server is running on 3001");
 });
