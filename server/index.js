@@ -36,7 +36,13 @@ app.post("/create", (req, res) => {
 });
 
 app.get('/events', (req, res) => {
-    db.query("SELECT * FROM CapSol-Events")
+    db.query("SELECT * FROM CapSol-Events", (err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.send(result);
+        }
+    })
 })
 
 app.listen(3001, () => {
