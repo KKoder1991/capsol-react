@@ -5,8 +5,6 @@ import SetDateAndTime from "../../components/SetDateAndTime/SetDateAndTime.js";
 import UploadImage from "../../components/UploadImage/UploadImage";
 import axios from "axios";
 
-
-
 export default function DisplayInputFields() {
 
   const [ eventName, setName ] = useState("");
