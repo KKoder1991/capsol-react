@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from 'react';
+import Axios from 'axios';
 import "./DisplayInputFields.css";
 import SetDateAndTime from "../../components/SetDateAndTime/SetDateAndTime.js";
 import UploadImage from "../../components/UploadImage/UploadImage";
@@ -15,6 +16,10 @@ export default function DisplayInputFields() {
   const [ eventLocation, setLocation ] = useState("");
   const [ eventImage, setImage ] = useState("");
   const [ eventDescription, setDescription ] = useState("");
+
+  const addEvent = () => {
+
+  }
 
     return (
       <div className="DisplayInputFields">
@@ -55,7 +60,7 @@ export default function DisplayInputFields() {
         </form>
         <div className="FormButtons">
           <div className="SaveButtonForm">
-            <SaveButtonForm />
+            <SaveButtonForm onClick={addEvent} />
           </div>
           <div className="CancelButtonForm">
             <CancelButtonForm />
