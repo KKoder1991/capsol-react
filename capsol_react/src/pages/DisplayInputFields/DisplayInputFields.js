@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from 'react';
 import "./DisplayInputFields.css";
 import SetDateAndTime from "../../components/SetDateAndTime/SetDateAndTime.js";
-import TextInput from "../../components/TextInput/TextInput.js";
 import UploadImage from "../../components/UploadImage/UploadImage";
 import SaveButtonForm from "../../components/SaveButtonForm/SaveButtonForm.js";
 import CancelButtonForm from "../../components/CancelButtonForm/CancelButtonForm";
+
+
 
 export default function DisplayInputFields() {
 
