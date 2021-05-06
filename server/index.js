@@ -10,11 +10,11 @@ const db = mysql.createConnection({
 });
 
 app.post('/create', (req, res) => {
-    const eventName = req.body.eventName
-    const eventDate = req.body.eventDate
-    const eventLocation = req.body.eventLocation
-    const eventImage = req.body.eventImage
-    const eventDescription = req.body.eventDescription
+    const eventName = req.body.eventName;
+    const eventDate = req.body.eventDate;
+    const eventLocation = req.body.eventLocation;
+    const eventImage = req.body.eventImage;
+    const eventDescription = req.body.eventDescription;
 })
 
 app.listen(3001, () => {
