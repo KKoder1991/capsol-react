@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from 'react';
-import Axios from 'axios';
 import "./DisplayInputFields.css";
 import SetDateAndTime from "../../components/SetDateAndTime/SetDateAndTime.js";
 import UploadImage from "../../components/UploadImage/UploadImage";
 import SaveButtonForm from "../../components/SaveButtonForm/SaveButtonForm.js";
 import CancelButtonForm from "../../components/CancelButtonForm/CancelButtonForm";
+import axios from "axios";
 
 
 
@@ -18,7 +18,15 @@ export default function DisplayInputFields() {
   const [ eventDescription, setDescription ] = useState("");
 
   const addEvent = () => {
-
+      axios.post('http://localhost:3000/DisplayInputFields/create', {
+        name: eventName,
+        date: eventDate,
+        location: eventLocation,
+        image: eventImage,
+        description: eventDescription,
+      }).then(() => {
+        console.log("success")
+      })
   }
 
     return (
