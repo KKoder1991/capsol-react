@@ -3,8 +3,6 @@ import { useState } from 'react';
 import "./DisplayInputFields.css";
 import SetDateAndTime from "../../components/SetDateAndTime/SetDateAndTime.js";
 import UploadImage from "../../components/UploadImage/UploadImage";
-import SaveButtonForm from "../../components/SaveButtonForm/SaveButtonForm.js";
-import CancelButtonForm from "../../components/CancelButtonForm/CancelButtonForm";
 import axios from "axios";
 
 
@@ -68,10 +66,10 @@ export default function DisplayInputFields() {
         </form>
         <div className="FormButtons">
           <div className="SaveButtonForm">
-            <SaveButtonForm  />
+            <button id="SaveButton" onClick={addEvent} >Save</button>
           </div>
           <div className="CancelButtonForm">
-            <CancelButtonForm />
+            <button id="SaveButton" onClick={addEvent} >Save</button>
           </div>
         </div>
       </div>
