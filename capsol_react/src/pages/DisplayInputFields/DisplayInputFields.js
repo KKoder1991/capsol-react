@@ -69,7 +69,7 @@ export default function DisplayInputFields() {
             <button id="SaveButton" onClick={addEvent} >Save</button>
           </div>
           <div className="CancelButtonForm">
-            <button id="SaveButton" onClick={addEvent} >Save</button>
+            <button id="CancelButton" onClick={addEvent} >Cancel</button>
           </div>
         </div>
       </div>
