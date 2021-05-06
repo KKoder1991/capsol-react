@@ -35,6 +35,10 @@ app.post("/create", (req, res) => {
   );
 });
 
+app.get('/events', (req, res) => {
+    db.query("SELECT * FROM CapSol-Events")
+})
+
 app.listen(3001, () => {
   console.log("Your server is running on 3001");
 });
