@@ -18,7 +18,7 @@ export default function DisplayInputFields() {
   const [ eventDescription, setDescription ] = useState("");
 
   const addEvent = () => {
-      axios.post('http://localhost:3000/DisplayInputFields/create', {
+      axios.post('http://localhost:3000/create', {
         name: eventName,
         date: eventDate,
         location: eventLocation,
@@ -68,7 +68,7 @@ export default function DisplayInputFields() {
         </form>
         <div className="FormButtons">
           <div className="SaveButtonForm">
-            <SaveButtonForm onClick={addEvent} />
+            <SaveButtonForm  />
           </div>
           <div className="CancelButtonForm">
             <CancelButtonForm />
