@@ -9,34 +9,33 @@ app.use(express.json());
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "NB2020_Apple",
-  database: "CapSol-System",
+  password: "password",
+  database: "capsol_schema",
 });
 
 app.post("/create", (req, res) => {
   const {
-    eventName,
-    eventDate,
-    eventLocation,
-    eventImage,
-    eventDescription,
+    date,
+    name,
+    place,
+    description,
   } = req.body;
 
   db.query(
-    "INSERT INTO CapSol-Events (eventName, eventDate, eventLocation, eventImage, eventDescription) VALUES (?, ?, ?, ?, ?)",
-    [eventName, eventDate, eventLocation, eventImage, eventDescription],
+    "INSERT INTO capsol_events (date, name, place, description) VALUES (?, ?, ?, ?)",
+     [ date, name, place, description],
     (err, result) => {
       if (err) {
         console.log(err);
       } else {
-        res.send("Values inserted");
+        res.send(result);
       }
     }
   );
 });
 
 app.get('/events', (req, res) => {
-    db.query("SELECT * FROM CapSol-Events", (err, result) => {
+    db.query("SELECT * FROM capsol_events", (err, result) => {
         if (err) {
             console.log(err)
         } else {
