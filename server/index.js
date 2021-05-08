@@ -44,6 +44,25 @@ app.get('/events', (req, res) => {
     })
 })
 
+app.put('/update', (req, res) => {
+    const {
+        date,
+        name,
+        place,
+        description,
+      } = req.body;
+    db.query(
+        "UPDATE SET capsol_events place = ? date = ? name = ? place = ? description = ? WHERE ID = ?",
+            [ place, date, name, description ], (err, results) =>  {
+                if (err){
+                    console.log(err)
+                } else {
+                    res.send(result)
+                }
+            }
+        );
+});
+
 app.listen(3001, () => {
   console.log("Your server is running on 3001");
 });

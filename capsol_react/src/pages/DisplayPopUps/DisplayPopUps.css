@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  .container-1{
+  .ul{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
