@@ -14,16 +14,11 @@ const db = mysql.createConnection({
 });
 
 app.post("/create", (req, res) => {
-  const {
-    date,
-    name,
-    place,
-    description,
-  } = req.body;
+  const { date, name, place, description } = req.body;
 
   db.query(
-    "INSERT INTO capsol_events (date, name, place, description) VALUES (?, ?, ?, ?)",
-     [ date, name, place, description],
+    "INSERT INTO capsol_events (date, name, place, description) VALUES ( ?, ?, ?, ?)",
+    [ date, name, place, description],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -34,33 +29,25 @@ app.post("/create", (req, res) => {
   );
 });
 
-app.get('/events', (req, res) => {
-    db.query("SELECT * FROM capsol_events", (err, result) => {
-        if (err) {
-            console.log(err)
-        } else {
-            res.send(result);
-        }
-    })
-})
+app.get("/events", (req, res) => {
+  db.query("SELECT * FROM capsol_events", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 
-app.put('/update', (req, res) => {
-    const {
-        date,
-        name,
-        place,
-        description,
-      } = req.body;
-    db.query(
-        "UPDATE SET capsol_events place = ? date = ? name = ? place = ? description = ? WHERE ID = ?",
-            [ place, date, name, description ], (err, results) =>  {
-                if (err){
-                    console.log(err)
-                } else {
-                    res.send(result)
-                }
-            }
-        );
+app.delete("/delete/:id", (req, res) => {
+  const id = req.params.id;
+  db.query("DELETE FROM capsol_events WHERE id = ?", id, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
 });
 
 app.listen(3001, () => {
