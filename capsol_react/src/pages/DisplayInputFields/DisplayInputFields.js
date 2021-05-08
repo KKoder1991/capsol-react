@@ -1,30 +1,33 @@
 import React from "react";
 import { useState } from "react";
 import "./DisplayInputFields.css";
-import UploadImage from "../../components/UploadImage/UploadImage";
 import axios from "axios";
 import DatePicker from "react-datepicker";
+import { registerLocale, setDefaultLocale } from 'react-datepicker';
+import de from 'date-fns/locale/de';
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function DisplayInputFields() {
-  const [eventName, setName] = useState("");
-  const [eventDate, setDate] = useState(new Date());
-  const [eventLocation, setLocation] = useState("");
-  /*const [eventImage, setImage] = useState("");*/
-  const [eventDescription, setDescription] = useState("");
+  const [name, setName] = useState();
+  const [date, setDate] = useState(new Date());
+  const [place, setLocation] = useState();
+  const [description, setDescription] = useState();
+  registerLocale('de', de);
+  setDefaultLocale('de');
 
   const addEvent = () => {
     axios
-      .post("http://localhost:3000/create", {
-        name: eventName,
-        date: eventDate,
-        location: eventLocation,
-        /*image: eventImage,*/
-        description: eventDescription,
+      .post("http://localhost:3001/create", {
+        name: name,
+        date: date,
+        place: place,
+        description: description
       })
       .then(() => {
         console.log("success");
-      });
+      }).catch(() => {
+        console.log("error");
+      })
   };
 
   return (
@@ -32,10 +35,13 @@ export default function DisplayInputFields() {
       <form>
         <div className="SetDateAndTime">
           <label>Set the Date and Time</label>
-        <DatePicker
-            selected={eventDate}
-            onChange={date => setDate(date)} 
-            />
+          <DatePicker
+            locale="de"
+            selected={date}
+            onChange={(date, event) => 
+                                  setDate(date, event.target.value)
+                                 } 
+                                />
         </div>
         <div className="EventName">
           <label>What's popping up?</label>
@@ -56,14 +62,6 @@ export default function DisplayInputFields() {
             }}
           ></input>
         </div>
-        <div className="UploadImage">
-          <label>Upload a Cover photo</label>
-          {/*<UploadImage
-            onChange={(event) => {
-              setImage(event.target.value);
-            }}
-          />*/}
-        </div>
         <div className="TellUsMore">
           <label>Tell Us More</label>
           <br></br>
@@ -83,7 +81,7 @@ export default function DisplayInputFields() {
           </button>
         </div>
         <div className="CancelButtonForm">
-          <button id="CancelButton" onClick={addEvent}>
+          <button id="CancelButton" >
             Cancel
           </button>
         </div>
