@@ -38,13 +38,13 @@ export default  class App extends React.Component {
             <div>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="styleLink">Home</Link>
                 </li>
                 <li>
-                  <Link to="/PopUps">Pop Ups</Link>
+                  <Link to="/PopUps" className="styleLink">Pop Ups</Link>
                 </li>
                 <li>
-                  <Link to="/DisplayInputFields">Form</Link>
+                  <Link to="/DisplayInputFields" className="styleLink">Form</Link>
                 </li>
               </ul>
             </div>
